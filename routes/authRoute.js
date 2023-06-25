@@ -10,6 +10,9 @@ import {
   orderStatusController,
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 //router object
 const router = express.Router();
